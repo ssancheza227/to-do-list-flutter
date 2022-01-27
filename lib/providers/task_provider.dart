@@ -13,4 +13,10 @@ class TaskProvider extends ChangeNotifier {
 
     notifyListeners();
   }
+
+  removeTask(Task removeTask) {
+    tasks.removeWhere((task) => task.title == removeTask.title);
+
+    notifyListeners();
+  }
 }
